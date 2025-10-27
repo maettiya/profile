@@ -99,20 +99,19 @@ a:focus {
   opacity: 1;
 }
 
-/* .card {
+.card {
   /* background: linear-gradient(90deg,rgba(61,61,61,1) 0%, rgba(69,69,69,1) 11%, rgba(56,56,56,1) 50%, rgba(61,61,61,1) 100%); */
   padding: 24px;
   border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  /* box-shadow: 0 10px 30px rgba(0,0,0,.1); */
   width: 600px;
   margin: 16px auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-} */
-
-.card:hover {
+}
+/* .card:hover {
   transform: translateY(-8px) scale(1.001);
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
+} */
 
 .list-inline > li {
   display: inline-block;
