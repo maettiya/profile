@@ -1,6 +1,8 @@
 body {
-  background: #282727;
-  background: linear-gradient(90deg,rgb(51, 51, 52) 0%, rgb(62, 62, 64) 11%, rgb(47, 45, 45) 50%, rgba(61, 61, 61, 1) 100%);
+  /* background: #282727;
+  background: linear-gradient(90deg,rgb(51, 51, 52) 0%, rgb(62, 62, 64) 11%, rgb(47, 45, 45) 50%, rgba(61, 61, 61, 1) 100%); */
+  background: url('images/bikini-bottom.png') no-repeat center center fixed;
+  background-size: cover;
   color: #b56f3f;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
@@ -97,15 +99,16 @@ a:focus {
   opacity: 1;
 }
 
-.card {
-  background: linear-gradient(90deg,rgba(61,61,61,1) 0%, rgba(69,69,69,1) 11%, rgba(56,56,56,1) 50%, rgba(61,61,61,1) 100%);
+/* .card {
+  /* background: linear-gradient(90deg,rgba(61,61,61,1) 0%, rgba(69,69,69,1) 11%, rgba(56,56,56,1) 50%, rgba(61,61,61,1) 100%); */
   padding: 24px;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   width: 600px;
   margin: 16px auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+} */
+
 .card:hover {
   transform: translateY(-8px) scale(1.001);
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
@@ -130,19 +133,295 @@ a:focus {
 }
 
 @media (max-width: 960px) {
-  .container {
+  .big-container {
     width: 700px;
   }
 }
 
 @media (max-width: 720px) {
-  .container {
+  .big-container {
     width: 500px;
   }
 }
 
 @media (max-width: 540px) {
-  .container {
+  .big-container {
     width: 300px;
+  }
+}
+
+/* From Uiverse.io by JohnnyCSilva */
+.coin {
+  font-size: 200px;
+  width: 0.1em;
+  height: 1em;
+  background: linear-gradient(#faa504, #141001);
+  margin: auto;
+  position: right;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: rotate_4001510 7s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.coin .side, .coin:before, .coin:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  border-radius: 50%;
+  right: -0.4em;
+  text-align: center;
+  line-height: 1;
+  transform: rotateY(-90deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.coin .tails, .coin:after {
+  left: -0.4em;
+  transform: rotateY(90deg);
+}
+
+.coin:before, .coin:after {
+  background: linear-gradient(#faa504, #141001);
+  backface-visibility: hidden;
+  transform: rotateY(90deg);
+}
+
+.coin:after {
+  transform: rotateY(-90deg);
+}
+
+@keyframes rotate_4001510 {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.svg_back {
+  transform: scaleX(-1);
+}
+
+/* From Uiverse.io by Novaxlo */
+.capybaraloader {
+  width: 14em;
+  height: 10em;
+  position: fixed;
+  bottom: 0;
+  left: -15em;
+  z-index: 1;
+  --color: rgb(204, 125, 45);
+  --color2: rgb(83, 56, 28);
+  transform: scale(0.75);
+  animation: walkAcross 20s linear infinite;
+}
+
+@keyframes walkAcross {
+  0% {
+    left: -15em;          /* off-screen left */
+    transform: scaleX(1) scale(0.75); /* facing right */
+  }
+  50% {
+    left: 100vw;          /* off-screen right */
+    transform: scaleX(1) scale(0.75);
+  }
+  51% {
+    transform: scaleX(-1) scale(0.75); /* flip to face left */
+  }
+  100% {
+    left: -15em;          /* back to start */
+    transform: scaleX(-1) scale(0.75);
+  }
+}
+
+.capybara {
+  width: 100%;
+  height: 7.5em;
+  position: relative;
+  z-index: 1;
+}
+.loader {
+  width: 100%;
+  height: 2.5em;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.capy {
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(var(--color), 90%, var(--color2));
+  border-radius: 45%;
+  position: relative;
+  z-index: 1;
+  animation: movebody 1s linear infinite;
+}
+.capyhead {
+  width: 7.5em;
+  height: 7em;
+  bottom: 0em;
+  right: 0em;
+  position: absolute;
+  background-color: var(--color);
+  z-index: 3;
+  border-radius: 3.5em;
+  box-shadow: -1em 0em var(--color2);
+  animation: movebody 1s linear infinite;
+}
+.capyear {
+  width: 2em;
+  height: 2em;
+  background: linear-gradient(-45deg, var(--color), 90%, var(--color2));
+  top: 0em;
+  left: 0em;
+  border-radius: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 3;
+}
+.capyear:nth-child(2) {
+  left: 5em;
+  background: linear-gradient(25deg, var(--color), 90%, var(--color2));
+}
+.capyear2 {
+  width: 100%;
+  height: 1em;
+  background-color: var(--color2);
+  bottom: 0em;
+  left: 0.5em;
+  border-radius: 100%;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.capymouth {
+  width: 3.5em;
+  height: 2em;
+  background-color: var(--color2);
+  position: absolute;
+  bottom: 0em;
+  left: 2.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+}
+.capylips {
+  width: 0.25em;
+  height: 0.75em;
+  border-radius: 100%;
+  transform: rotate(-45deg);
+  background-color: var(--color);
+}
+.capylips:nth-child(2) {
+  transform: rotate(45deg);
+}
+.capyeye {
+  width: 2em;
+  height: 0.5em;
+  background-color: var(--color2);
+  position: absolute;
+  bottom: 3.5em;
+  left: 1.5em;
+  border-radius: 5em;
+  transform: rotate(45deg);
+}
+.capyeye:nth-child(4) {
+  transform: rotate(-45deg);
+  left: 5.5em;
+  width: 1.75em;
+}
+.capyleg {
+  width: 6em;
+  height: 5em;
+  bottom: 0em;
+  left: 0em;
+  position: absolute;
+  background: linear-gradient(var(--color), 95%, var(--color2));
+  z-index: 2;
+  border-radius: 2em;
+  animation: movebody 1s linear infinite;
+}
+.capyleg2 {
+  width: 1.75em;
+  height: 3em;
+  bottom: 0em;
+  left: 3.25em;
+  position: absolute;
+  background: linear-gradient(var(--color), 80%, var(--color2));
+  z-index: 2;
+  border-radius: 0.75em;
+  box-shadow: inset 0em -0.5em var(--color2);
+  animation: moveleg 1s linear infinite;
+}
+.capyleg2:nth-child(3) {
+  width: 1.25em;
+  left: 0.5em;
+  height: 2em;
+  animation: moveleg2 1s linear infinite 0.075s;
+}
+
+@keyframes moveleg {
+  0% {
+    transform: rotate(-45deg) translateX(-5%);
+  }
+  50% {
+    transform: rotate(45deg) translateX(5%);
+  }
+  100% {
+    transform: rotate(-45deg) translateX(-5%);
+  }
+}
+
+@keyframes moveleg2 {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes movebody {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.loaderline {
+  width: 50em;
+  height: 0.5em;
+  border-top: 0.5em dashed var(--color2);
+  animation: moveline 10s linear infinite;
+}
+
+@keyframes moveline {
+  0% {
+    transform: translateX(0%);
+    opacity: 0%;
+  }
+  5% {
+    opacity: 100%;
+  }
+  95% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    transform: translateX(-70%);
   }
 }
